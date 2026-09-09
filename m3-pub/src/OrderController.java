@@ -60,5 +60,9 @@ public class OrderController {
         Order created = controller.createOrder("book", 2);
         System.out.println("Created order: " + created);
         System.out.println("Found order: " + controller.getOrderById(created.id()));
+        User user = new User("u1", "Ada Lovelace", "ada@example.com", true);
+        System.out.println("Created user: " + user);
+        UserDTO dto = UserDTO.fromUser(user);
+        System.out.println("Mapped DTO: " + dto);
     }
 }
